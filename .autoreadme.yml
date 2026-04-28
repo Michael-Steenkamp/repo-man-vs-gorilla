@@ -1,0 +1,55 @@
+# .autoreadme.yml
+name: AI Documentation Update
+on:
+  push:
+    branches: [ main ]
+    paths-ignore: ['README.md'] # Prevents infinite loops!
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Run AutoReadme AI
+        uses: Michael-Steenkamp/repo-readme-generator@v1
+        with:
+          gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
+          # Uncomment below if you set up heavy routing secrets
+          # openai-api-key: ${{ secrets.OPENAI_API_KEY }}
+          # anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+includePatterns:
+  - "**/*.md"
+  - "**/*.txt"
+  - "**/*.xml"
+  - "**/*.java"
+  - "**/*.yaml"
+  - "**/*.yml"
+  - "**/*.cs"
+  
+excludePatterns:
+  - ".mvn/**"
+  - ".idea/**"
+  - "target/**"
+  - ".gitignore"
+  - ".gitattributes"
+  - ".github/**"
+  - "node_modules/**"
+
+routing:
+  threshold_chars: 1500      # Diffs under this size use the fast model
+  fast_provider: "gemini"    # Options: gemini, claude, openai
+  heavy_provider: "openai"   # Options: gemini, claude, openai
+
+style:
+  theme: "developer-first"   # Options: developer-first, minimalist, executive, creative
+  include_badges: true       # Set to false to prevent the AI from generating markdown badges
