@@ -24,6 +24,6 @@ To explore or develop this project:
 
 <!-- AI_STATE_START
 {
-  "summary": "Initial README for a new Unreal Engine project, 'repo-man-vs-gorilla', detailing its asset structure and how to get started. The latest git diff removed auto-readme workflow configuration, which does not directly impact the project's functional README content."
+  "summary": "Initial README for an Unreal Engine project, 'repo-man-vs-gorilla', detailing its asset structure and how to get started. The project's core assets, including character blueprints, levels, and character animations, have received recent internal updates as indicated by the latest git diff, without altering the overall project structure documented in the README."
 }
 AI_STATE_END -->
