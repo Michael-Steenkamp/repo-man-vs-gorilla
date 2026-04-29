@@ -22,6 +22,8 @@ To explore or develop this project:
 2.  Clone this repository to your local machine.
 3.  Open the `repo-man-vs-gorilla.uproject` file directly using Unreal Engine.
 
+``` Auto Readme Generation ```
+
 <!-- AI_STATE_START
 {
   "summary": "Initial README for an Unreal Engine project, 'repo-man-vs-gorilla', detailing its asset structure and how to get started. The project's core assets, including character blueprints, levels, and character animations, have received recent internal updates as indicated by the latest git diff, without altering the overall project structure documented in the README."
