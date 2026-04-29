@@ -2,6 +2,9 @@
 
 This repository hosts an Unreal Engine project centered around a "man vs gorilla" theme. It includes a comprehensive set of assets for two distinct characters, various animations, interactive levels, and a collection of sound effects to bring the experience to life.
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/585f9e1c-e0ec-4498-918d-aeb370f0041f" />
+
+
 ## Project Structure
 
 The core content is organized within the `Content/` directory:
